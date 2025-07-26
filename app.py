@@ -69,18 +69,18 @@ rmse = np.sqrt(mse)
 mae = mean_absolute_error(y, predicted_prices)
 r2 = r2_score(y, predicted_prices) * 100
 
-st.markdown("## 🔮 Predicted vs. Actual Prices")
+st.markdown("##  Predicted vs. Actual Prices")
 fig3, ax3 = plt.subplots(figsize=(7, 4))
 ax3.plot(y, "g", label="Actual Price")
 ax3.plot(predicted_prices, "r", linestyle="dashed", label="Predicted Price")
 ax3.legend()
 st.pyplot(fig3)
 
-st.markdown(f"### 🎯 Model Performance")
+st.markdown(f"###  Model Performance")
 st.markdown(f"**MSE:** {mse:.2f} | **RMSE:** {rmse:.2f} | **MAE:** {mae:.2f} | **Accuracy (R² Score):** {r2:.2f}%")
 
 latest_predicted_price = predicted_prices[-1][0]
-st.markdown(f"### 💰 Predicted Closing Price: **${latest_predicted_price:.2f} USD**")
+st.markdown(f"###  Predicted Closing Price: **${latest_predicted_price:.2f} USD**")
 
 st.markdown("---")
-st.markdown("**✨ Built by Jatin Aggarwal** 🚀")
+st.markdown("** Built by Jatin Aggarwal** ")
